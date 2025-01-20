@@ -9,7 +9,7 @@
     "client:test": "pnpm --filter chatdoc-api-demo-client run test",
     "server:dev": "pnpm --filter chatdoc-api-demo-server run start:dev",
     "server:build": "pnpm --filter chatdoc-api-demo-server run build",
-    "build": "pnpm run client:build && pnpm run server:build",
+    "build": "pnpm run client:build && pnpm run server:build && mkdir -p build && cp -r dist/* build/",
     "start": "node runall.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install"
